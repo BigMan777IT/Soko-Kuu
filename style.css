@@ -1,0 +1,109 @@
+:root{
+  --accent:#0D9488;
+  --accent-light:#CCFBF1;
+  --accent-dark:#0F766E;
+  --bg:#FAFAF8;
+  --card:#ffffff;
+  --border:#E5E3DD;
+  --text:#1A1A1A;
+  --muted:#6B6B6B;
+  --wholesale-bg:#FEF3C7;
+  --wholesale-text:#92400E;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text)}
+button{font-family:inherit;cursor:pointer}
+input,select{font-family:inherit}
+
+.screen{display:none;max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);flex-direction:column}
+.screen.active{display:flex}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 10px;gap:10px}
+.brand{font-size:22px;font-weight:700;color:var(--accent)}
+.location{font-size:13px;color:var(--muted)}
+
+.icon-btn{background:none;border:none;font-size:18px;color:var(--text)}
+.icon-btn.floating{position:absolute;top:16px;background:#fff;border-radius:999px;width:32px;height:32px}
+.icon-btn.floating.left{left:16px}
+.icon-btn.floating.right{right:16px}
+
+.search-bar{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin:0 20px 16px;color:var(--muted);font-size:14px}
+.search-input{flex:1;border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:13px}
+
+.category-row{display:flex;gap:10px;overflow-x:auto;padding:0 20px 16px}
+.category-chip{flex:0 0 auto;text-align:center;font-size:11px;background:none;border:none;color:var(--text)}
+.category-chip .swatch{width:52px;height:52px;border-radius:14px;margin-bottom:4px}
+
+.section-title{padding:0 20px;font-size:15px;font-weight:600;margin-bottom:10px}
+.section-title.small{font-size:13px;margin:16px 0 6px}
+
+.product-grid{padding:0 20px;flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;text-align:left}
+.product-card .thumb{height:100px;background:var(--border)}
+.product-card .info{padding:8px 10px}
+.product-card .name{font-size:12px;font-weight:600}
+.product-card .price-row{display:flex;align-items:center;gap:4px;margin-top:2px}
+.product-card .price{font-size:12px;color:var(--accent);font-weight:600}
+
+.badge-verified{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:999px;background:var(--accent);flex:0 0 auto}
+.badge-verified svg{width:8px;height:8px}
+
+.tag{font-size:9px;padding:2px 6px;border-radius:6px;display:inline-block}
+.tag.retail{background:#F1F0EB;color:var(--muted)}
+.tag.wholesale{background:var(--wholesale-bg);color:var(--wholesale-text)}
+
+.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:12px 0;border-top:1px solid var(--border);background:#fff}
+.nav-btn{background:none;border:none;color:var(--muted);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.nav-btn.active{color:var(--accent)}
+
+.filter-row{display:flex;gap:8px;padding:0 20px 12px;overflow-x:auto}
+.filter-row select{font-size:11px;background:#fff;border:1px solid var(--border);padding:6px 10px;border-radius:999px}
+.verified-toggle{font-size:11px;display:flex;align-items:center;gap:4px;background:#fff;border:1px solid var(--border);padding:6px 10px;border-radius:999px;white-space:nowrap}
+
+.result-count{padding:0 20px 6px;font-size:12px;color:var(--muted)}
+.result-list{padding:0 20px;flex:1;display:flex;flex-direction:column;gap:10px}
+.result-card{display:flex;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px;cursor:pointer;text-align:left;border:1px solid var(--border)}
+.result-card .thumb{width:72px;height:72px;border-radius:8px;background:var(--border);flex:0 0 auto}
+.result-card .body{flex:1;min-width:0}
+.result-card .name{font-size:12px;font-weight:600}
+.result-card .price{font-size:12px;color:var(--accent);font-weight:600;margin:2px 0}
+.result-card .tags{display:flex;gap:6px;align-items:center}
+.like-btn{background:none;border:none;font-size:16px;color:var(--muted)}
+.like-btn.liked{color:#E11D48}
+
+.detail-image{height:260px;background:var(--border);position:relative}
+.detail-body{padding:16px 20px;flex:1}
+.tag-row{display:flex;gap:6px;margin-bottom:6px}
+.detail-body h1{font-size:18px;margin:4px 0}
+.detail-price{font-size:18px;font-weight:700;color:var(--accent);margin-bottom:14px}
+.seller-card{display:flex;align-items:center;gap:10px;padding:10px;background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:14px}
+.seller-avatar{width:40px;height:40px;border-radius:999px;background:var(--accent-light)}
+.seller-name{font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.seller-location{font-size:11px;color:var(--muted)}
+.detail-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.detail-actions{display:flex;gap:10px;padding:14px 20px;border-top:1px solid var(--border);background:#fff}
+.icon-action{width:48px;height:48px;border-radius:12px;border:1px solid var(--border);background:#fff;font-size:18px}
+.primary-btn{flex:1;height:48px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:14px;font-weight:600}
+
+.register-top{padding:20px 20px 10px}
+.progress-label{font-size:12px;color:var(--muted);margin-bottom:6px}
+.progress-bar{display:flex;gap:4px}
+.progress-bar>div{flex:1;height:4px;border-radius:2px}
+.progress-fill{background:var(--accent)}
+.progress-empty{background:var(--border)}
+.register-body{padding:14px 20px;flex:1}
+.register-body h1{font-size:19px;margin:0 0 4px}
+.muted{font-size:12px;color:var(--muted);margin-bottom:18px}
+.register-body label{font-size:12px;font-weight:600;display:block;margin-bottom:4px}
+.register-body label.block-label{margin-bottom:8px}
+.register-body input{width:100%;padding:11px;border:1px solid var(--border);border-radius:10px;font-size:13px;margin-bottom:14px}
+.id-choice{display:flex;gap:10px;margin-bottom:14px}
+.id-option{flex:1;padding:14px 8px;border-radius:10px;border:1px solid var(--border);background:#fff;text-align:center}
+.id-option.active{border:2px solid var(--accent);background:var(--accent-light)}
+.id-title{font-size:12px;font-weight:600}
+.id-sub{font-size:10px;color:var(--muted)}
+.id-option.active .id-title,.id-option.active .id-sub{color:var(--accent-dark)}
+.register-footer{padding:14px 20px;border-top:1px solid var(--border);background:#fff}
+
+.empty-state{padding:40px 20px;text-align:center;color:var(--muted);font-size:13px}
